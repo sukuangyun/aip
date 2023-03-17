@@ -1,5 +1,10 @@
 ## 百度识图服务封装
 
+### 安装
+```
+composer require sukuangyun/aip
+```
+
 ### 使用
 
 默认实现了文件缓存管理器来缓存accessToken，正常使用时请替换该缓存管理器，例如使用Redis等。 只需实现get()和set()方法即可。
