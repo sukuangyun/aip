@@ -1,0 +1,19 @@
+{
+  "name": "sukuangyun/aip",
+  "autoload": {
+    "psr-4": {
+      "Sukuangyun\\Aip\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "苏狂云",
+      "email": "1006061628@qq.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1|^8.0",
+    "guzzlehttp/guzzle": "^7.5",
+    "ext-json": "*"
+  }
+}
