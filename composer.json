@@ -1,5 +1,7 @@
 {
   "name": "sukuangyun/aip",
+  "keywords": ["ocr", "php"],
+  "license": "MIT",
   "autoload": {
     "psr-4": {
       "Sukuangyun\\Aip\\": "src/"
