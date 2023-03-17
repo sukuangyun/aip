@@ -16,7 +16,7 @@ class FileCache implements CacheInterface
     public function __construct(string $filePath = '')
     {
         if (!$filePath) {
-            $filePath = __DIR__ . 'aip.cache';
+            $filePath = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'aip_cache.tmp';
         }
         $this->filePath = $filePath;
     }
@@ -53,7 +53,7 @@ class FileCache implements CacheInterface
         return $content;
     }
 
-    public function set(string $key, $data, int $ttl = 0): bool
+    public function set(string $key, $data, ?int $ttl = null): bool
     {
         $content = $this->read();
         if ($content) {

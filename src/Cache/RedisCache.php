@@ -22,12 +22,9 @@ class RedisCache implements CacheInterface
         return unserialize($value);
     }
 
-    public function set(string $key, $data, int $ttl = 0): bool
+    public function set(string $key, $data, ?int $ttl = null): bool
     {
         $data = serialize($data);
-        if (!$ttl) {
-            return $this->redis->set($key, $data);
-        }
         return $this->redis->set($key, $data, $ttl);
     }
 }
